@@ -11,7 +11,7 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="Admin/assets/images/favicon.ico">
+      <link rel="shortcut icon" href="Admin/assets/images/favicon.ico">
             <!-- third party css -->
             <link href="Admin/assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
             <link href="Admin/assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
@@ -149,26 +149,26 @@
 
                 <!-- LOGO -->
                 <div class="logo-box">
-                    <a href="index.php" class="logo logo-dark text-center">
-                        <span class="logo-sm">
-                            <img src="Admin/assets/images/logo-sm-dark.png" alt="" height="24">
-                            <!-- <span class="logo-lg-text-light">Minton</span> -->
-                        </span>
-                        <span class="logo-lg">
-                            <img src="Admin/assets/images/logo-dark.png" alt="" height="20">
-                            <!-- <span class="logo-lg-text-light">M</span> -->
-                        </span>
-                    </a>
+                        <a href="index.php" class="logo logo-dark text-center">
+                            <span class="logo-sm">
+                                <img src="Admin/assets/images/logo-sm-dark.png" alt="" height="24">
+                                <!-- <span class="logo-lg-text-light">Minton</span> -->
+                            </span>
+                            <span class="logo-lg">
+                                <img src="Admin/assets/images/logo-dark.png" alt="" height="20">
+                                <!-- <span class="logo-lg-text-light">M</span> -->
+                            </span>
+                        </a>
 
-                    <a href="index.php" class="logo logo-light text-center">
-                        <span class="logo-sm">
-                            <img src="Admin/assets/images/logo-sm.png" alt="" height="24">
-                        </span>
-                        <span class="logo-lg">
-                            <img src="Admin/assets/images/logo-light.png" alt="" height="20">
-                        </span>
-                    </a>
-                </div>
+                        <a href="index.php" class="logo logo-light text-center">
+                            <span class="logo-sm">
+                                <img src="Admin/assets/images/logo-sm.png" alt="" height="24">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="Admin/assets/images/logo-light.png" alt="" height="20">
+                            </span>
+                        </a>
+                    </div>
 
                 <div class="h-100" data-simplebar>
 
@@ -260,7 +260,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box">
-                                    <h4 class="page-title">Les Accueilleurs </h4>
+                                    <h4 class="page-title">Les Chefs Services </h4>
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="javascript: void(0);"></a></li>
@@ -293,8 +293,8 @@
                                         <!-- end row -->
                 
                                   
-                                            <table id="basic-datatable" class="table dt-responsive nowrap w-100">
-                                                <thead class="table-light">
+                                            <table id="basic-datatable" class="table table-striped dt-responsive nowrap w-100">
+                                                <thead class="table-primary">
                                                     <tr>
                                                         
                                                        
@@ -306,7 +306,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                  <c:forEach items="${accs}" var="p">
+                                                 <c:forEach items="${chefs}" var="p">
                                                     <tr>
                                                       
                                                       
@@ -314,21 +314,21 @@
                                                         <td>${p.prenom}</td>
                                                         <td>${p.username}</td>
                                                         <td>${p.tel}</td>
-                                                       
                     
                                                         <td>
                                                             <ul class="list-inline mb-0">
                                                                 <li class="list-inline-item">
-                                                                    <a href="modifierAccueilleur.php?id=${p.id}" class="btn btn-purple waves-effect waves-light"> <i class="fe-edit"></i></a>
+                                                                    <a  href="modifierChefService.php?id=${p.id}" class="btn btn-outline-primary rounded-pill waves-effect waves-light"> <i class="fe-edit"></i></a>
                                                                 </li>
                                                                 <li class="list-inline-item">
-                                                                    <a onclick="return confirm('etes vous sure de sepprimer?')"  href="supprimerAcc.php?id=${p.id}" class="btn btn-danger waves-effect waves-light"> <i class="mdi mdi-delete"></i></a>
+                                                                    <a onclick="return confirm('etes vous sure de sepprimer?')"  href="supprimerChef.php?id=${p.id}" class="btn btn-outline-danger rounded-pill waves-effect waves-light"> <i class="mdi mdi-delete"></i></a>
                                                                 </li>
                                                             </ul>
                                                             
                                                         </td>
                                                     </tr>
-                                                  </c:forEach>
+                                                      </c:forEach>
+                                           
                                                    
                                                  </tbody>
                                             </table>
@@ -336,16 +336,16 @@
                                     </div>
                                 </div>
                             </div>
-                              <!-- sample modal content -->
+                                <!-- sample modal content -->
     
                               <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h4 class="modal-title">Ajouter Accueilleur</h4>
+                                            <h4 class="modal-title">Ajouter Chef Service</h4>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                         <form action="SaveAcc.php" method="post">
+                                         <form action="SaveChef.php" method="post">
                                         <div class="modal-body p-4">
                                          
                                             <div class="row">
@@ -436,7 +436,7 @@
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
           <!-- Vendor js -->
-          <script src="Admin/assets/js/vendor.min.js"></script>
+           <script src="Admin/assets/js/vendor.min.js"></script>
 
           <!-- third party js -->
           <script src="Admin/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
@@ -450,6 +450,7 @@
   
           <!-- App js -->
           <script src="Admin/assets/js/app.min.js"></script>
+        
         
     </body>
 

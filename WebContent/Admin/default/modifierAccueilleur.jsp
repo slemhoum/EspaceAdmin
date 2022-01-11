@@ -11,7 +11,7 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="Admin/assets/images/favicon.ico">
+         <link rel="shortcut icon" href="Admin/assets/images/favicon.ico">
             <!-- third party css -->
             <link href="Admin/assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
             <link href="Admin/assets/libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
@@ -59,7 +59,7 @@
     
                         <li class="dropdown notification-list topbar-dropdown">
                             <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                                <img src="Admin/assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                               <img src="Admin/assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
                                 <span class="pro-user-name ms-1">
                                     Nik Patel <i class="mdi mdi-chevron-down"></i> 
                                 </span>
@@ -96,27 +96,27 @@
                     </ul>
 
                     <!-- LOGO -->
-                    <div class="logo-box">
-                        <a href="index.php" class="logo logo-dark text-center">
-                            <span class="logo-sm">
-                                <img src="Admin/assets/images/logo-sm-dark.png" alt="" height="24">
-                                <!-- <span class="logo-lg-text-light">Minton</span> -->
-                            </span>
-                            <span class="logo-lg">
-                                <img src="Admin/assets/images/logo-dark.png" alt="" height="20">
-                                <!-- <span class="logo-lg-text-light">M</span> -->
-                            </span>
-                        </a>
+                   <div class="logo-box">
+                    <a href="index.php" class="logo logo-dark text-center">
+                        <span class="logo-sm">
+                            <img src="Admin/assets/images/logo-sm-dark.png" alt="" height="24">
+                            <!-- <span class="logo-lg-text-light">Minton</span> -->
+                        </span>
+                        <span class="logo-lg">
+                            <img src="Admin/assets/images/logo-dark.png" alt="" height="20">
+                            <!-- <span class="logo-lg-text-light">M</span> -->
+                        </span>
+                    </a>
 
-                        <a href="index.php" class="logo logo-light text-center">
-                            <span class="logo-sm">
-                                <img src="Admin/assets/images/logo-sm.png" alt="" height="24">
-                            </span>
-                            <span class="logo-lg">
-                                <img src="Admin/assets/images/logo-light.png" alt="" height="20">
-                            </span>
-                        </a>
-                    </div>
+                    <a href="index.php" class="logo logo-light text-center">
+                        <span class="logo-sm">
+                            <img src="Admin/assets/images/logo-sm.png" alt="" height="24">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="Admin/assets/images/logo-light.png" alt="" height="20">
+                        </span>
+                    </a>
+                </div>
     
                     <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
                         <li>
@@ -149,7 +149,7 @@
 
                 <!-- LOGO -->
                 <div class="logo-box">
-                    <a href="index.php" class="logo logo-dark text-center">
+                    <a href="index.html" class="logo logo-dark text-center">
                         <span class="logo-sm">
                             <img src="Admin/assets/images/logo-sm-dark.png" alt="" height="24">
                             <!-- <span class="logo-lg-text-light">Minton</span> -->
@@ -160,7 +160,7 @@
                         </span>
                     </a>
 
-                    <a href="index.php" class="logo logo-light text-center">
+                    <a href="index.html" class="logo logo-light text-center">
                         <span class="logo-sm">
                             <img src="Admin/assets/images/logo-sm.png" alt="" height="24">
                         </span>
@@ -178,7 +178,7 @@
                     <!--- Sidemenu -->
                     <div id="sidebar-menu">
 
-                         <ul id="side-menu">
+                        <ul id="side-menu">
 
                             
                 
@@ -234,7 +234,6 @@
                                
                             </li>
                 </ul>
-
                     </div>
                     <!-- End Sidebar -->
 
@@ -278,64 +277,66 @@
                             <div class="col-lg-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <div class="row mb-2">
-                                            <div class="col-sm-6">
-                                                <button data-bs-toggle="modal" data-bs-target="#con-close-modal" class="btn btn-info mb-2"><i class="mdi mdi-plus-circle me-1"></i> Ajouter</button>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="float-sm-end">
-                                                    
-                                                   
-                                                    
+                                        <div id="addproduct-nav-pills-wizard" class="twitter-bs-wizard form-wizard-header">
+                                            <h4 class="header-title">Modifier Accueilleur</h4>
+          
+
+                                            <form method="post" action="updateAcc.php">
+                                                <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="field-1" class="form-label">Nom</label>
+                                                        <input type="text" class="form-control" id="field-1" value="${acc.nom}" placeholder="nom" name="nom">
+                                                          <input type="hidden" class="form-control" value="${acc.id}"  name="id">
+                                                    </div>
                                                 </div>
-                                            </div><!-- end col-->
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="field-2" class="form-label">Prenom</label>
+                                                        <input type="text" class="form-control" id="field-2" placeholder="prenom" value="${acc.prenom}" name="prenom">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <div class="mb-3">
+                                                        <label for="field-4" class="form-label">telephone</label>
+                                                        <input type="number" class="form-control" id="field-4" placeholder="telephone" name="tel" value="${acc.tel}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="mb-3">
+                                                        <label for="field-5" class="form-label">username</label>
+                                                        <input type="text" class="form-control" id="field-5" placeholder="username" name="user" value="${acc.username}">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="mb-3">
+                                                        <label for="field-6" class="form-label">Password</label>
+                                                        <input type="password" class="form-control" id="field-6" placeholder="password" name="pass" value="${acc.password}">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <ul class="pager wizard mb-0 list-inline text-end mt-3">
+                                                <li class="previous list-inline-item">
+                                                    <button type="submit" class="btn btn-success"> Modifier </button>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <button type="reset" class="btn btn-secondary">Annuler </button>
+                                                </li>
+                                            </ul>
+                                        </form>
+
                                         </div>
-                                        <!-- end row -->
-                
-                                  
-                                            <table id="basic-datatable" class="table dt-responsive nowrap w-100">
-                                                <thead class="table-light">
-                                                    <tr>
-                                                        
-                                                       
-                                                        <th>Nom</th>
-                                                        <th>Prenom</th>
-                                                        <th>Username</th>
-                                                        <th>Telephone</th>
-                                                      <th style="width: 75px;">Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                  <c:forEach items="${accs}" var="p">
-                                                    <tr>
-                                                      
-                                                      
-                                                        <td>${p.nom}</td>
-                                                        <td>${p.prenom}</td>
-                                                        <td>${p.username}</td>
-                                                        <td>${p.tel}</td>
-                                                       
-                    
-                                                        <td>
-                                                            <ul class="list-inline mb-0">
-                                                                <li class="list-inline-item">
-                                                                    <a href="modifierAccueilleur.php?id=${p.id}" class="btn btn-purple waves-effect waves-light"> <i class="fe-edit"></i></a>
-                                                                </li>
-                                                                <li class="list-inline-item">
-                                                                    <a onclick="return confirm('etes vous sure de sepprimer?')"  href="supprimerAcc.php?id=${p.id}" class="btn btn-danger waves-effect waves-light"> <i class="mdi mdi-delete"></i></a>
-                                                                </li>
-                                                            </ul>
-                                                            
-                                                        </td>
-                                                    </tr>
-                                                  </c:forEach>
-                                                   
-                                                 </tbody>
-                                            </table>
-                                       
                                     </div>
                                 </div>
-                            </div>
+
+                                </div>
+
+                            
+                         
                               <!-- sample modal content -->
     
                               <div id="con-close-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
@@ -345,20 +346,18 @@
                                             <h4 class="modal-title">Ajouter Accueilleur</h4>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
-                                         <form action="SaveAcc.php" method="post">
                                         <div class="modal-body p-4">
-                                         
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label for="field-1" class="form-label">Nom</label>
-                                                        <input type="text" class="form-control" id="field-1" placeholder="nom" name="nom">
+                                                        <input type="text" class="form-control" id="field-1" placeholder="nom">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label for="field-2" class="form-label">Prenom</label>
-                                                        <input type="text" class="form-control" id="field-2" placeholder="prenom" name="prenom">
+                                                        <input type="text" class="form-control" id="field-2" placeholder="prenom">
                                                     </div>
                                                 </div>
                                             </div>
@@ -367,29 +366,28 @@
                                                 <div class="col-md-4">
                                                     <div class="mb-3">
                                                         <label for="field-4" class="form-label">telephone</label>
-                                                        <input type="number" class="form-control" id="field-4" placeholder="telephone" name="tel">
+                                                        <input type="number" class="form-control" id="field-4" placeholder="telephone">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="mb-3">
                                                         <label for="field-5" class="form-label">username</label>
-                                                        <input type="text" class="form-control" id="field-5" placeholder="username" name="user">
+                                                        <input type="text" class="form-control" id="field-5" placeholder="username">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="mb-3">
                                                         <label for="field-6" class="form-label">Password</label>
-                                                        <input type="password" class="form-control" id="field-6" placeholder="password" name="pass">
+                                                        <input type="password" class="form-control" id="field-6" placeholder="password">
                                                     </div>
                                                 </div>
                                             </div>
                                            
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="reset" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">Annuler</button>
-                                            <button type="submit" class="btn btn-info waves-effect waves-light">Enregistrer</button>
+                                            <button type="button" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">Annuler</button>
+                                            <button type="button" class="btn btn-info waves-effect waves-light">Enregistrer</button>
                                         </div>
-                                          </form>
                                     </div>
                                 </div>
                             </div><!-- /.modal -->
@@ -436,7 +434,7 @@
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
           <!-- Vendor js -->
-          <script src="Admin/assets/js/vendor.min.js"></script>
+           <script src="Admin/assets/js/vendor.min.js"></script>
 
           <!-- third party js -->
           <script src="Admin/assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
